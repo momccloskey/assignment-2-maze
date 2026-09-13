@@ -18,5 +18,9 @@ public class playermovement : MonoBehaviour
     Vector3 direction = new Vector3(horizontalInput, verticalInput, 0);
 
     transform.Translate(direction * speed * Time.deltaTime);
+
+    if (position = new Vector3(x, y, z);
+    Debug.log = "yay you win"
+        #help
     }
 }
