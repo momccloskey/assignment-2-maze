@@ -4,9 +4,8 @@ public class PlayerMovement : MonoBehaviour
 { 
     void Start()
     {
-        Debug.Log("maybe the script works now please god");
     }
-    public float playerSpeed = 6f;
+    public float playerSpeed = 10f;
 
     void Update()
     {
