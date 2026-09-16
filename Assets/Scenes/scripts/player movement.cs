@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Debug.Log("maybe the script works now please god");
     }
-    public float playerSpeed = 10f;
+    public float playerSpeed = 6f;
 
     void Update()
     {
@@ -14,6 +14,28 @@ public class PlayerMovement : MonoBehaviour
         float v = Input.GetAxis("Vertical");
 
         Vector3 move = new Vector3(h, 0f, v);
+
+        if (Input.GetKey(KeyCode.W))
+        {
+            move += Vector3.forward;
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            move += Vector3.left;
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            move += Vector3.back;
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            move += Vector3.right;
+        }
+        if (Input.GetKey(KeyCode.Space))
+        {
+            move += Vector3.up;
+        }
+
         transform.Translate(move * playerSpeed * Time.deltaTime);
     }
 }
